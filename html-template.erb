@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Thank You!</title>
+</head>
+<body>
+  <table border="1">
+    <tr>
+      <% header_maker.each do |header| %>
+        <th><%= "#{header}" %></th>
+        <% end %>
+      </tr>
+      <% @attendee_repository.all_attendeez_with_attribute.each do |attendee| %>
+       <tr>
+         <td> <%= "#{attendee.registration_date}" %> </td>
+         <td> <%= "#{attendee.first_name}" %> </td>
+         <td> <%= "#{attendee.last_name}" %> </td>
+         <td> <%= "#{attendee.email_address}" %> </td>
+         <td> <%= "#{attendee.home_phone}" %> </td>
+         <td> <%= "#{attendee.street_address}" %> </td>
+         <td> <%= "#{attendee.city}" %> </td>
+         <td> <%= "#{attendee.state}" %> </td>
+         <td> <%= "#{attendee.zipcode}" %> </td>
+         <td> <%= "#{attendee.district}" %> </td>
+        </tr
+        <% end %>
+         </td>
+  </table
+</body>
+</html>
